@@ -161,6 +161,8 @@ class DBHelper(var context: Context): SQLiteOpenHelper(context,"DataBasePill",nu
         cv.put("name",name)
         cv.put("description",descr)
         cv.put("instr",instr)
+        cv.put("takes",0)
+        cv.put("nottakes",0)
         var id = db.insert("pill",null,cv)
         Log.d("NEW ID:",id.toString())
         db.close()
